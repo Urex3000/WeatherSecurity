@@ -16,7 +16,7 @@
         app:srcCompat="@drawable/sky" />
 
     <TextView
-        android:id="@+id/textMainContent"
+        android:id="@+id/tv_textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-light"
