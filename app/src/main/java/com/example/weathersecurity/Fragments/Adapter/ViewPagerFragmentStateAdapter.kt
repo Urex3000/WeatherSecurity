@@ -1,14 +1,12 @@
 package com.example.weathersecurity.Fragments.Adapter
 
-import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentActivity
-import androidx.fragment.app.FragmentManager
+import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
-import com.example.weathersecurity.Fragments.FullDailyData
+import com.example.weathersecurity.Fragments.MainFragment
 
-class ViewPagerFragmentStateAdapter(fa: FragmentActivity) : FragmentStateAdapter(fa) {
-    override fun getItemCount(): Int = 2
+class ViewPagerFragmentStateAdapter(activity: AppCompatActivity) : FragmentStateAdapter(activity) {
+    override fun getItemCount() =2
+    override fun createFragment(position: Int) = MainFragment.newInstance(position)
 
-    override fun createFragment(position: Int): Fragment = FullDailyData()
 
 }
