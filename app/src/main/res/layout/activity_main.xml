@@ -4,50 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:orientation="vertical">
+    android:background="@color/purple_500"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
 
-    <FrameLayout
-        android:id="@+id/container"
-        android:name="com.example.weathersecurity.Fragments.MainFragmentActivity"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/main_vp"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
-
-    <ImageView
-        android:id="@+id/imageback"
-        android:layout_width="411dp"
-        android:layout_height="843dp"
-        android:scaleType="fitXY"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/sky" />
-
-    <TextView
-        android:id="@+id/tv_textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="sans-serif-light"
-        android:text="8°c"
-        android:textColor="#FFFFFF"
-        android:textSize="60sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textCityLocation"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Ростов-на-Дону"
-        android:textColor="#FFFFFF"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/tv_textView"
-        app:layout_constraintTop_toTopOf="@+id/imageback" />
 
 
 </LinearLayout>
