@@ -12,7 +12,7 @@ import retrofit2.Response
 
 class MainViewModel(private val repo: Repo) : ViewModel() {
 
-    private val liveData: MutableLiveData<Result> by lazy {
+    val liveData: MutableLiveData<Result> by lazy {
         MutableLiveData<Result>()
     }
 
@@ -26,7 +26,8 @@ class MainViewModel(private val repo: Repo) : ViewModel() {
             override fun onResponse(call: Call<WeatherData>, response: Response<WeatherData>) {
                 val data = response.body()
                 if (data != null) {
-                    val result: Result = Result(data, "duck")
+                    val result: Result =
+                        Result(data, "duck $query ${data.current?.temp_c.toString()}")
                     println(result.error)
                     liveData.postValue(result)
                 } else {
@@ -47,7 +48,6 @@ class MainViewModel(private val repo: Repo) : ViewModel() {
     fun getData(): LiveData<Result> {
         return liveData
     }
-
 
 
     data class Result(val weatherData: WeatherData?, val error: String)
